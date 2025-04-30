@@ -1,0 +1,12 @@
+# Ignore virtual environment
+venv/
+
+# Ignore model files (if too large for GitHub)
+*.pkl
+*.zip
+
+# Ignore IDE and OS-specific files
+.vscode/
+.DS_Store
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
