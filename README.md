@@ -1,54 +1,89 @@
-# Automated Product Classification for E-Commerce
+# 🧠 AI-Powered Product Classifier
 
-## Project Overview
-This project aims to automate product classification for an e-commerce marketplace. It utilizes natural language processing (NLP) and computer vision techniques to classify products based on text descriptions and images. By automating the categorization process, the project improves user experience and facilitates efficient product searches.
+This project uses AI to automatically classify fashion products based on both:
+- 🖼️ **Product images** (via computer vision)
+- 📝 **Product descriptions** (via natural language processing)
 
-## Objectives
-- **Text Classification**:
-  - Extract features from product descriptions using TF-IDF, Word2Vec, and BERT.
-  - Group similar products and generate category labels.
-- **Image Classification**:
-  - Utilize SIFT and VGG16 for feature extraction.
-  - Implement supervised classification to categorize products based on images.
-- **Integration**:
-  - Combine textual and visual features for robust classification.
-  - Evaluate feasibility and performance using machine learning models.
+It’s a multimodal AI system built using Python, OpenCV, NLP, and a Random Forest classifier — perfect for e-commerce platforms needing automated catalog tagging.
 
-## Tools & Techniques
-- **NLP Methods**:
-  - Bag of Words, TF-IDF
-  - Pretrained models: Word2Vec, BERT, Universal Sentence Encoder
-- **Computer Vision Methods**:
-  - SIFT: Scale-Invariant Feature Transform for manual feature extraction.
-  - VGG16: Deep learning-based CNN for image classification.
-- **Clustering & Classification**:
-  - K-Means for unsupervised clustering.
-  - Supervised classification with CNNs.
-- **Evaluation Metrics**:
-  - Adjusted Rand Index (ARI), Silhouette Score, F1 Accuracy.
+---
 
-## Key Insights
-- **Text-Based Models**:
-  - TF-IDF performs well with balanced speed and accuracy.
-  - BERT and USE provide high-quality embeddings but require more computational resources.
-- **Image-Based Models**:
-  - VGG16 outperforms SIFT due to its ability to capture deep, complex features.
-  - Data augmentation enhances model generalization.
-- **Combined Approach**:
-  - Future integration of text and image features is promising for improving accuracy.
+## 🚀 Live Demo
 
-## Deliverables
-- **Jupyter Notebooks**:
-  - Preprocessing and feature extraction for text and images.
-  - Supervised and unsupervised classification experiments.
-- **Presentation**:
-  - Summarizes methods, results, and future perspectives.
-- **Code**:
-  - Includes implementation of NLP pipelines, CNN architectures, and data augmentation strategies.
+📍 You can launch the app using Streamlit (locally):
 
-## Why This Project?
-This project demonstrates:
-- Expertise in NLP and computer vision integration.
-- Proficiency with advanced machine learning frameworks for classification.
-- Practical application of data science to solve real-world e-commerce challenges.
-# AI-Powered-Product-Classifier
+```bash
+streamlit run app.py
+
+
+📦 Dataset (Images + Metadata)
+Due to GitHub's file size limits, the dataset is not included in this repository.
+https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small
+link to download the dataset
+
+🔽 Download Manually:
+
+📁 After downloading:
+Extract images.zip into data/images/
+Place styles.csv into data/
+
+Folder structure should look like:
+automated-product-classifier/
+│
+├── app.py
+├── product_classifier_rf.pkl
+├── tfidf_vectorizer.pkl
+├── label_encoder.pkl
+├── requirements.txt
+└── data/
+    ├── images/
+    │   ├── 1234.jpg
+    │   ├── ...
+    └── styles.csv
+
+🧪 Features
+✅ Extracts image features using OpenCV
+
+✅ Extracts text features using TF-IDF from product descriptions
+
+✅ Combines both to classify products into categories
+
+✅ Streamlit frontend for real-time predictions
+
+✅ Trained on Myntra product catalog dataset
+
+🛠 Tech Stack
+Tool	        Role
+Python	      Core programming
+Streamlit	    Web app interface
+OpenCV	      Image preprocessing
+scikit-learn	ML model + vectorizer
+pandas	      Data handling
+joblib	      Model persistence
+
+🔄 How to Run
+# 1. Create a virtual environment (optional but recommended)
+python -m venv venv
+# Activate:
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run the Streamlit app
+streamlit run app.py
+
+
+📷 Sample Output
+Upload an image + enter product description
+➡️ Model predicts: "Tshirts"
+✅ Confidence: 92%
+
+👩‍💻 Author
+Deepthi V
+GitHub: @deepthiv1221
+
+
