@@ -8,14 +8,6 @@ It’s a multimodal AI system built using Python, OpenCV, NLP, and a Random Fore
 
 ---
 
-## 🚀 Live Demo
-
-📍 You can launch the app using Streamlit (locally):
-
-```bash
-streamlit run app.py
-
-
 📦 Dataset (Images + Metadata)
 Due to GitHub's file size limits, the dataset is not included in this repository.
 https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small
@@ -76,11 +68,18 @@ pip install -r requirements.txt
 # 3. Run the Streamlit app
 streamlit run app.py
 
+## 🚀 Live Demo
+
+📍 You can launch the app using Streamlit (locally):
+
+```bash
+streamlit run app.py
 
 📷 Sample Output
 Upload an image + enter product description
 ➡️ Model predicts: "Tshirts"
 ✅ Confidence: 92%
+
 
 👩‍💻 Author
 Deepthi V
